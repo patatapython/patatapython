@@ -1,0 +1,167 @@
+# Single source for the profile README and every image it shows.
+# Edit this file, then run: python3 tools/build.py
+# Card body lines are wrapped by hand; build.py refuses lines that would overflow.
+# Each card shows a screenshot from media/: focus is the point to keep in view
+# (0-1 from the top left), zoom crops tighter, fit = "contain" shows it whole.
+
+[person]
+name = "Guillermo Manzanares"
+role = "Software & Applied AI Engineer"
+tagline = "Ten years in industrial automation. Now I build software that runs in production."
+linkedin = "https://www.linkedin.com/in/guillermomanzanares"
+website = "https://epitrixconsulting.com"
+
+intro = [
+  "I build software and AI systems that solve one concrete problem, and I take them to production.",
+  "Agricultural engineer by training, I spent ten years automating a food-processing plant before an MSc in Big Data and Data Science (neural networks and deep learning) took me into AI. Since 2026 I work on my own as a software and AI engineer.",
+  "I'm looking for an AI, data or software team where I can build systems people actually use, and learn from engineers with more road behind them.",
+]
+
+how_i_work = [
+  "Tests from the start, continuous integration, Docker, and strict typing where it matters.",
+  "AI-assisted development with Claude Code, with review and tests for everything that goes in. The architecture, product and stack decisions are mine.",
+]
+
+toolbox = ["Python", "FastAPI", "PostgreSQL", "Docker", "LangChain", "LangGraph", "RAG", "Qdrant",
+           "YOLO", "OpenCV", "pytest", "GitHub Actions", "Linux", "SCADA"]
+
+private_note = "Most of my work is client software and lives in private repositories. What is public are finished portfolio versions, which is why some of them have few commits. Happy to walk through any of this code in as much depth as you want."
+
+# kind: production | pilot | thesis | opensource
+[[section]]
+title = "Systems I've built"
+
+  [[section.card]]
+  id = "paletizador"
+  shot = "media/paletizador.png"
+  focus = [0.4, 0.3]
+  zoom = 1.15
+  kind = "production"
+  label = "IN PRODUCTION · ALMACENES RUBIO"
+  title = "Pallet optimizer"
+  url = "https://github.com/patatapython/paletizador-optimizer"
+  body = [
+    "Six-pass engine that splits each day's orders from",
+    "five delivery platforms into CHEP pallets, following",
+    "the warehouse's own stacking rules. Over an hour by",
+    "hand, now about 3 minutes. Real Carrefour orders.",
+  ]
+  stack = "Python · pytest · desktop GUI · PDF labels"
+
+  [[section.card]]
+  id = "mensa"
+  shot = "media/mensa.png"
+  focus = [0.72, 0.36]
+  zoom = 1.5
+  kind = "production"
+  label = "IN PRODUCTION · FREELANCE"
+  title = "Mensa España chatbot"
+  body = [
+    "Multi-agent RAG. A planner routes each question to",
+    "an agent over the official documents or to one that",
+    "queries the association's live data; a synthesizer",
+    "answers only from that context.",
+  ]
+  stack = "LangGraph · FastAPI · Qdrant · PostgreSQL · Docker"
+
+  [[section.card]]
+  id = "chatbots"
+  shot = "media/chatbots.png"
+  focus = [0.8, 0.27]
+  zoom = 1.6
+  kind = "production"
+  label = "IN PRODUCTION · FIRST CLIENT"
+  title = "Multi-tenant chatbot platform"
+  body = [
+    "Grew out of the Mensa bot. Each company uploads its",
+    "documents, sets its branding, reviews what visitors",
+    "ask, and embeds the chat in its site with one",
+    "snippet. Isolated data per tenant.",
+  ]
+  stack = "FastAPI · Qdrant · OpenAI · Docker · VPS"
+
+  [[section.card]]
+  id = "rtfarma"
+  shot = "media/rtfarma.png"
+  focus = [0.42, 0.34]
+  zoom = 1.35
+  kind = "pilot"
+  label = "PILOT · DESKTOP"
+  title = "rtfarma & rtpedidos"
+  url = "https://rtfarma.com"
+  body = [
+    "Supplier orders, deliveries and mismatches, with the",
+    "data on the customer's own computer. Ed25519-signed",
+    "licences and signed automatic updates. The fork for",
+    "a packaging warehouse shipped in seven days.",
+  ]
+  stack = "Tauri · Rust · React · SQLite · Cloudflare Workers"
+
+  [[section.card]]
+  id = "oxalis"
+  shot = "media/oxalis.png"
+  focus = [0.5, 0.48]
+  zoom = 2.0
+  kind = "pilot"
+  label = "PILOT · SAAS"
+  title = "Oxalis"
+  url = "https://oxalis.fit"
+  body = [
+    "Multi-tenant SaaS for gardening companies: clients,",
+    "properties, treatment calendars, invoices and",
+    "maintenance alerts. Role-based access, full data",
+    "isolation per company, continuous deploy to a VPS.",
+  ]
+  stack = "PostgreSQL · Docker · Coolify · React"
+
+  [[section.card]]
+  id = "tracking"
+  shot = "media/tracking.jpg"
+  focus = [0.5, 0.55]
+  kind = "thesis"
+  label = "MSC THESIS · COMPUTER VISION"
+  title = "In-store people tracking"
+  url = "https://github.com/patatapython/Sistema-Tracking-Farmacia"
+  body = [
+    "Counts and follows shoppers: YOLO detection, DeepSORT",
+    "re-identification so an ID survives crossings, zones",
+    "with dwell time and heatmaps. Every detected person",
+    "can be pixelated; everything runs locally.",
+  ]
+  stack = "Python · YOLO · DeepSORT · OpenCV"
+
+[[section]]
+title = "Open source"
+footer = "Also on GitHub: [link-cleaner-pro](https://github.com/patatapython/link-cleaner-pro), a Chrome extension that strips tracking from links locally, and [rosa-de-los-vientos](https://github.com/patatapython/rosa-de-los-vientos), wind roses from 976 Spanish weather stations."
+
+  [[section.card]]
+  id = "dividir"
+  shot = "media/dividir.png"
+  focus = [0.5, 0.4]
+  kind = "opensource"
+  label = "OPEN SOURCE · MIT"
+  title = "dividir"
+  url = "https://github.com/patatapython/dividir"
+  body = [
+    "Split group expenses to the cent and settle up in",
+    "the fewest transfers. No accounts: the link is the",
+    "key. Property-based tests, end-to-end tests with",
+    "Playwright and CI.",
+  ]
+  stack = "TypeScript · Next.js · Prisma · PostgreSQL"
+
+  [[section.card]]
+  id = "pollo"
+  shot = "media/pollo.png"
+  fit = "contain"
+  kind = "opensource"
+  label = "OPEN SOURCE · MIT"
+  title = "pollo"
+  url = "https://github.com/patatapython/pollo"
+  body = [
+    "Shared lists with no account and no email: five",
+    "random words are the only key. Works offline, no",
+    "tracking. Self-hosted PostgreSQL behind a",
+    "repository layer.",
+  ]
+  stack = "Next.js · TypeScript · PostgreSQL · PWA"
